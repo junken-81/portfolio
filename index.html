@@ -355,6 +355,46 @@
     font-size:16px;
     margin-top:18px;
   }
+
+  .project-accordion{
+    border-top:1px solid var(--line);
+  }
+  .project-item{
+    border-bottom:1px solid var(--line);
+  }
+  .project-item summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:30px 2px;
+  }
+  .project-item summary::-webkit-details-marker{display:none;}
+  .project-item summary:focus-visible{outline:2px solid var(--teal);outline-offset:6px;}
+  .project-name{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:26px;
+    transition:color .2s ease;
+  }
+  .project-item summary:hover .project-name{color:var(--teal);}
+  .chevron{
+    flex-shrink:0;
+    width:11px;height:11px;
+    border-right:2px solid var(--ink-faint);
+    border-bottom:2px solid var(--ink-faint);
+    transform:rotate(45deg);
+    transition:transform .25s ease, border-color .2s ease;
+  }
+  .project-item[open] .chevron{
+    transform:rotate(-135deg);
+    border-color:var(--teal);
+  }
+  .project-panel{
+    padding:0 2px 44px;
+  }
   .project-facts{
     display:flex;
     gap:32px;
@@ -569,7 +609,7 @@
     <div class="sec-head">
       <span class="eyebrow">SHOWREEL</span>
       <h2 class="sec-title">데모릴</h2>
-      <p class="sec-sub">최근 작업물을 모은 데모릴입니다. 아래 재생 영역에 유튜브/비메오 영상을 연결하세요.</p>
+      <p class="sec-sub">최근 작업물을 모은 데모릴입니다.</p>
     </div>
 
     <div class="reel-frame">
@@ -592,15 +632,29 @@
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">FEATURED PROJECT — 01</span>
-      <h2 class="sec-title">EverSoul</h2>
-      <p class="project-desc">
-        프로젝트 설명을 이곳에 채워주세요.
-      </p>
+      <span class="eyebrow">PROJECTS</span>
+      <h2 class="sec-title">작업물</h2>
+      <p class="sec-sub">프로젝트 이름을 클릭하면 상세 내용이 열립니다.</p>
     </div>
 
-    <div class="reel-frame" style="aspect-ratio:21/9;">
-      <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+    <div class="project-accordion">
+      <!--
+        프로젝트 추가 방법:
+        아래 <details class="project-item"> 블록 전체를 복사해서
+        </div>(project-accordion 닫는 태그) 위에 붙여넣고 내용만 바꾸면 됩니다.
+      -->
+      <details class="project-item">
+        <summary>
+          <span class="project-name">EverSoul</span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <p class="project-desc">프로젝트 설명을 이곳에 채워주세요.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
     </div>
   </div>
 </section>
