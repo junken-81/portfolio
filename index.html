@@ -373,6 +373,12 @@
   }
   .project-item summary::-webkit-details-marker{display:none;}
   .project-item summary:focus-visible{outline:2px solid var(--teal);outline-offset:6px;}
+  .project-head{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+  }
   .project-name{
     font-family:var(--display);
     font-weight:600;
@@ -380,6 +386,24 @@
     transition:color .2s ease;
   }
   .project-item summary:hover .project-name{color:var(--teal);}
+  .badge{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:1px;
+    padding:5px 12px;
+    border-radius:20px;
+    border:1px solid;
+  }
+  .badge-shipped{
+    color:var(--teal);
+    border-color:rgba(63,230,207,0.4);
+    background:rgba(63,230,207,0.07);
+  }
+  .badge-dropped{
+    color:var(--ink-faint);
+    border-color:var(--line);
+    background:rgba(255,255,255,0.02);
+  }
   .chevron{
     flex-shrink:0;
     width:11px;height:11px;
@@ -640,16 +664,88 @@
     <div class="project-accordion">
       <!--
         프로젝트 추가 방법:
-        아래 <details class="project-item"> 블록 전체를 복사해서
-        </div>(project-accordion 닫는 태그) 위에 붙여넣고 내용만 바꾸면 됩니다.
+        아래 <details class="project-item"> 블록 하나를 통째로 복사해서
+        붙여넣고 이름 / 배지(상용화·드랍) / 소속 / 설명만 바꾸면 됩니다.
+        드랍된 프로젝트는 배지를 <span class="badge badge-dropped">드랍</span>으로 바꾸세요.
       -->
       <details class="project-item">
         <summary>
-          <span class="project-name">EverSoul</span>
+          <span class="project-head">
+            <span class="project-name">EverSoul</span>
+            <span class="badge badge-shipped">상용화</span>
+          </span>
           <span class="chevron"></span>
         </summary>
         <div class="project-panel">
-          <p class="project-desc">프로젝트 설명을 이곳에 채워주세요.</p>
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 나인아크</div>
+            <div><strong>ROLE</strong> 애니메이션 파트장 (라이브 서비스 이후)</div>
+            <div><strong>PERIOD</strong> 2023.01 – 2026.06</div>
+          </div>
+          <p class="project-desc">포스트 아포칼립스와 중세 판타지가 결합된 세계관 속에서 정령 캐릭터를 수집하고 육성하는 모바일 RPG입니다. 애니메이션풍 3D 캐릭터와 호감도 기반 스토리텔링, 아기자기한 영지 경영 요소가 특징입니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">화이트데이 - 학교라는 이름의 미궁</span>
+            <span class="badge badge-shipped">상용화</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 손노리</div>
+            <div><strong>ROLE</strong> 애니메이션 파트장</div>
+            <div><strong>PERIOD</strong> 2015.11 · 2017.08</div>
+          </div>
+          <p class="project-desc">화이트데이 전날 밤, 연두고등학교를 배경으로 한 1인칭 호러 어드벤처입니다. 동양적 정서의 공포감을 살린 원작 IP를 바탕으로, 2015년 모바일판과 2017년 스팀·PS4판 리메이크에 모두 참여했습니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">프렌즈 레이싱</span>
+            <span class="badge badge-shipped">상용화</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 손노리</div>
+            <div><strong>ROLE</strong> 애니메이션 파트장</div>
+            <div><strong>PERIOD</strong> 2018.10 – 2021.12</div>
+          </div>
+          <p class="project-desc">카카오프렌즈 IP를 활용해 2018년 출시한 3D 모바일 레이싱 게임입니다. 프렌즈 게임 시리즈 최초의 풀 3D 타이틀로, 카카오프렌즈 캐릭터들을 레이서로 구현하고 캐릭터 보이스를 처음 도입했습니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">어스토니시아 VS for Kakao</span>
+            <span class="badge badge-shipped">상용화</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 손노리</div>
+            <div><strong>ROLE</strong> 애니메이션 파트장</div>
+            <div><strong>PERIOD</strong> 2014.04 –</div>
+          </div>
+          <p class="project-desc">손노리의 고전 IP '어스토니시아 스토리'를 기반으로 한 실시간 심리 대전 모바일 RPG입니다. 가위바위보 방식의 전투와 소환수를 활용한 필살기, 다양한 카드 스킬이 특징입니다.</p>
           <div class="reel-frame" style="aspect-ratio:21/9;">
             <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
           </div>
