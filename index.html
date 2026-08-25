@@ -404,6 +404,11 @@
     border-color:var(--line);
     background:rgba(255,255,255,0.02);
   }
+  .badge-personal{
+    color:var(--violet);
+    border-color:rgba(138,123,255,0.4);
+    background:rgba(138,123,255,0.08);
+  }
   .chevron{
     flex-shrink:0;
     width:11px;height:11px;
@@ -513,6 +518,37 @@
     border:1px solid var(--line);
     padding:9px 16px;
     border-radius:20px;
+  }
+
+  .career-list{
+    margin-top:64px;
+    border-top:1px solid var(--line);
+  }
+  .career-row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:6px 24px;
+    padding:18px 2px;
+    border-bottom:1px solid var(--line);
+  }
+  .career-period{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.5px;
+    color:var(--ink-faint);
+    min-width:150px;
+  }
+  .career-company{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:15px;
+    color:var(--ink);
+    min-width:150px;
+  }
+  .career-role{
+    color:var(--ink-dim);
+    font-size:13.5px;
   }
 
   /* ---------- CONTACT ---------- */
@@ -665,8 +701,9 @@
       <!--
         프로젝트 추가 방법:
         아래 <details class="project-item"> 블록 하나를 통째로 복사해서
-        붙여넣고 이름 / 배지(상용화·드랍) / 소속 / 설명만 바꾸면 됩니다.
-        드랍된 프로젝트는 배지를 <span class="badge badge-dropped">드랍</span>으로 바꾸세요.
+        붙여넣고 이름 / 배지(상용화·드랍·개인작) / 소속 / 설명만 바꾸면 됩니다.
+        드랍된 프로젝트는 배지를 <span class="badge badge-dropped">드랍</span>으로,
+        개인작은 <span class="badge badge-personal">개인작</span>으로 바꾸세요.
       -->
       <details class="project-item">
         <summary>
@@ -741,11 +778,116 @@
         </summary>
         <div class="project-panel">
           <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
-            <div><strong>COMPANY</strong> 손노리</div>
+            <div><strong>COMPANY</strong> 턴온게임즈 (現 넷마블 네오)</div>
             <div><strong>ROLE</strong> 애니메이션 파트장</div>
             <div><strong>PERIOD</strong> 2014.04 –</div>
           </div>
           <p class="project-desc">손노리의 고전 IP '어스토니시아 스토리'를 기반으로 한 실시간 심리 대전 모바일 RPG입니다. 가위바위보 방식의 전투와 소환수를 활용한 필살기, 다양한 카드 스킬이 특징입니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">다함께 차차차 for Kakao</span>
+            <span class="badge badge-shipped">상용화</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 턴온게임즈 (現 넷마블 네오)</div>
+            <div><strong>ROLE</strong> 라이브 서비스 애니메이션 담당 (개발 단계는 미참여)</div>
+            <div><strong>PERIOD</strong> 2012.12 – 2014.08</div>
+          </div>
+          <p class="project-desc">국민 캐주얼 게임으로 불릴 만큼 큰 인기를 끈 모바일 러닝 레이싱 게임입니다. 개발에는 참여하지 않았고, 라이브 서비스 단계에서 애니메이션 리소스 대응과 안정화를 담당했습니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">다함께 차차차 2</span>
+            <span class="badge badge-shipped">상용화</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 턴온게임즈 (現 넷마블 네오)</div>
+            <div><strong>ROLE</strong> 초반 프로토타입 제작 참여 (퇴사 후 정식 발매)</div>
+            <div><strong>PERIOD</strong> ~2014.08 제작 참여 · 2015.04 발매</div>
+          </div>
+          <p class="project-desc">전작 대비 리얼리티를 강조하는 방향으로 개발된 후속작입니다. 초반 프로토타입 제작 단계까지 참여했고, 퇴사 이후 정식 발매되었습니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">목욕의 신 VR</span>
+            <span class="badge badge-dropped">드랍</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 손노리</div>
+            <div><strong>ROLE</strong> 애니메이션 파트장 (리깅 설계)</div>
+            <div><strong>PERIOD</strong> 2014.08 – 2019.10 재직 중</div>
+          </div>
+          <p class="project-desc">개발이 중단되어 미출시된 VR 격투 게임입니다. 격투 장르 특성에 맞춰 보정 Stretch Bone을 설계하고 리깅을 담당했습니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">프렌즈 배틀봇</span>
+            <span class="badge badge-dropped">드랍</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 손노리</div>
+            <div><strong>ROLE</strong> 애니메이션 파트장 (프로토타입 제안 영상·콘티)</div>
+            <div><strong>PERIOD</strong> 2014.08 – 2019.10 재직 중</div>
+          </div>
+          <p class="project-desc">프로토타입 단계에서 개발이 중단된 프로젝트입니다. 제안 영상과 초안 콘티, 애니메이션 제작 및 검수를 담당했습니다.</p>
+          <div class="reel-frame" style="aspect-ratio:21/9;">
+            <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="project-item">
+        <summary>
+          <span class="project-head">
+            <span class="project-name">어스토니시아 온라인</span>
+            <span class="badge badge-dropped">드랍</span>
+          </span>
+          <span class="chevron"></span>
+        </summary>
+        <div class="project-panel">
+          <div class="reel-meta" style="margin-top:0;margin-bottom:18px;">
+            <div><strong>COMPANY</strong> 손노리</div>
+            <div><strong>ROLE</strong> 애니메이터</div>
+            <div><strong>PERIOD</strong> 2009.03 – 2011.05</div>
+          </div>
+          <p class="project-desc">클로즈베타까지 진행된 후 정식 서비스 없이 개발이 중단된 MMORPG입니다. PC·NPC·몬스터·배경 오브젝트의 Biped/Bone 세팅과 스키닝, 애니메이션 작업을 담당했습니다.</p>
           <div class="reel-frame" style="aspect-ratio:21/9;">
             <div class="reel-placeholder">프로젝트 이미지 또는 영상을 이곳에 추가하세요</div>
           </div>
@@ -778,6 +920,30 @@
           <span class="skill-chip">Character Animation</span>
           <span class="skill-chip">Client Iteration</span>
         </div>
+      </div>
+    </div>
+
+    <div class="career-list">
+      <span class="eyebrow" style="margin-bottom:22px;display:inline-flex;">CAREER</span>
+      <div class="career-row">
+        <span class="career-period">2003.06 – 2005.05</span>
+        <span class="career-company">SCEK</span>
+        <span class="career-role">QA 담당 · 3rd/1st 파티 게임 테스트 및 로컬라이징</span>
+      </div>
+      <div class="career-row">
+        <span class="career-period">2005.07 – 2006.11</span>
+        <span class="career-company">LS Soft</span>
+        <span class="career-role">그래픽 제너럴리스트 · 아케이드 게임 제작</span>
+      </div>
+      <div class="career-row">
+        <span class="career-period">2006.12 – 2007.05</span>
+        <span class="career-company">EXON GAMES</span>
+        <span class="career-role">애니메이터 · Crimson Glory (MMORPG), 첫 애니메이터 프로젝트</span>
+      </div>
+      <div class="career-row">
+        <span class="career-period">2007.05 – 2008.10</span>
+        <span class="career-company">WeLegend</span>
+        <span class="career-role">애니메이터 · 프로젝트 B&amp;S (MMORPG)</span>
       </div>
     </div>
   </div>
